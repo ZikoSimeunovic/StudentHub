@@ -1,0 +1,53 @@
+/* hero.css */
+.Hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  border-bottom: 2px solid #ddd;
+  background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), url("src/assets/slike/download.jpg");
+  background-size: cover;
+  height: 800px;
+}
+
+  
+  .Hero h1 {
+    font-size: 3rem;
+    padding: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .Hero p {
+    padding: 10px;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    margin-bottom: 30px;
+    max-width: 800px;
+  }
+  
+  .SearchBar {
+    width: 100%;
+    max-width: 600px;
+    
+  }
+  
+  .SearchBar input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .SearchBar input:focus {
+    outline: none;
+    border-color: #4CAF50;
+  }
+  
