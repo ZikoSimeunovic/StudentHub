@@ -5,7 +5,7 @@ function Hero() {
   return (
     <div className="Hero">
       <h1>STUDENTSKI OGLASI</h1>
-      <p>Pronađite ili ponudite studentske usluge - od privatnih časova do ispitnih skripti</p>
+      <p>Pronađiteeeeeeeeeeeee ili ponudite studentske usluge - od privatnih časova do ispitnih skripti</p>
       {/* Inline stil za Hero sa centriranjem */}
       <SearchBar 
         style={{ 
