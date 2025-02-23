@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import NavBar from './pages/Navbar.jsx'
 import Hero from './pages/Hero.jsx'
+import Kategorija from './pages/kategorije.jsx'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -11,6 +12,7 @@ function App() {
     <>
   <NavBar/>
  <Hero/>
+ <Kategorija/>
     </>
   )
 }
