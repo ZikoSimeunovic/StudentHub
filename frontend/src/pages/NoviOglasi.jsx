@@ -9,7 +9,7 @@ function Noglas() {
   
         <div className="kategorija-container">
           {/* Časovi */}
-          <div className="kontent">
+          <div className="kontentt">
             <div className="title-price">
               <h4>Časoví k Milanicko</h4>
               <div className="cena">16.000Dm</div>
@@ -23,7 +23,7 @@ function Noglas() {
           </div>
   
           {/* Projekt */}
-          <div className="kontent">
+          <div className="kontentt">
             <div className="title-price">
               <h4>Projekt</h4>
               <div className="cena">3.000Dm</div>
@@ -37,7 +37,7 @@ function Noglas() {
           </div>
   
           {/* Bruscoljaků */}
-          <div className="kontent">
+          <div className="kontentt">
             <div className="title-price">
               <h4>Bruscoljaků</h4>
               <div className="cena">10.000Dm</div>
@@ -51,7 +51,7 @@ function Noglas() {
           </div>
   
           {/* Písané CVa */}
-          <div className="kontent">
+          <div className="kontentt">
             <div className="title-price">
               <h4>Písané CVa</h4>
               <div className="cena">20.000Dm</div>

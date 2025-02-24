@@ -4,8 +4,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #282c34;
-    color: white;
+    background-color: #ffffff;
+    color: #0d47a1;
     font-family: Arial, sans-serif;
   }
   
@@ -25,7 +25,7 @@
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-right: 40px;
+    margin-right: 20px;
   }
   
   .prijava-btn:hover {
