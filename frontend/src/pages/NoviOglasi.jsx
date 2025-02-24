@@ -1,70 +1,96 @@
-import "../assets/css/novioglas.css";
-function Noglas() {
-    return (
-      <div className="Noglas">
-        <div className="header-container">
-          <h1 className="naslov">NAJNOVIJI OGLASI</h1>
-          <button className="dugme">Pogledaj sve →</button>
-        </div>
-  
-        <div className="kategorija-container">
-          {/* Časovi */}
-          <div className="kontentt">
-            <div className="title-price">
-              <h4>Časoví k Milanicko</h4>
-              <div className="cena">16.000Dm</div>
-            </div>
-            <p className="opis">Strajdasdaseň či Agobojš: Strajeň z namyvajitelstva a penzanta Ala a penzanta Alystatrajdasdaseň či Agobojš: Strajeň z namyvajitelstva a pena a penzanta Alystatrajdasdaseň či Agobojš: Strajeň z namyvajitelstva a pena a penzanta Alystatrajdasdaseň či Agobojš: Strajeň z namyvajitelstva a penystatrajdasdaseň či Agobojš: Strajeň z namyvajitelstva a penzanta Alystatrajdasdaseň či Agobojš: Strajeň z namyvajitelstva a penzanta Alystatrajdasdaseň či Agobojš: Strajeň z namyvajitelstva a penzanta Alystatrajdasdaseň či Agobojš: Strajeň z namyvajitelstva a penzanta Alystatrajdasdaseň či Agobojš: Strajeň z namyvajitelstva a penzanta Alysta.</p>
-            <div className="info-container">
-  <div className="info-linija">Ladzeň/Vito 34</div>
-  <div className="info-linija">Vermelý VŠ 21 dnes</div>
-  <div className="info-linija">Rejmeň 24</div>
-</div>
-          </div>
-  
-          {/* Projekt */}
-          <div className="kontentt">
-            <div className="title-price">
-              <h4>Projekt</h4>
-              <div className="cena">3.000Dm</div>
-            </div>
-            <p className="opis">Produkovala cena Ukraina komunikatu Praktu</p>
-            <div class="info-container">
-  <div className="info-linija">Ladzeň/Vito 34</div>
-  <div className="info-linija">Vermelý VŠ 21 dnes</div>
-  <div className="info-linija">Rejmeň 24</div>
-</div>
-          </div>
-  
-          {/* Bruscoljaků */}
-          <div className="kontentt">
-            <div className="title-price">
-              <h4>Bruscoljaků</h4>
-              <div className="cena">10.000Dm</div>
-            </div>
-            <p className="opis">Strajeň zarazete informačně: Strangka</p>
-            <div class="info-container">
-  <div className="info-linija">Ladzeň/Vito 34</div>
-  <div className="info-linija">Vermelý VŠ 21 dnes</div>
-  <div className="info-linija">Rejmeň 24</div>
-</div>
-          </div>
-  
-          {/* Písané CVa */}
-          <div className="kontentt">
-            <div className="title-price">
-              <h4>Písané CVa</h4>
-              <div className="cena">20.000Dm</div>
-            </div>
-            <p className="opis">Produkovala praxe CVA na mojilenci</p>
-            <div class="info-container">
-  <div className="info-linija">Ladzeň/Vito 34</div>
-  <div className="info-linija">Vermelý VŠ 21 dnes</div>
-  <div className="info-linija">Rejmeň 24</div>
-</div>
-          </div>
-        </div>
-      </div>
-    );
+import React from 'react';
+import { MapPin, Clock, Star } from 'lucide-react';
+import "../assets/css/novioglas.css"
+
+const listings = [
+  {
+    title: "Časovi iz Mehanike",
+    description: "Iskusan student drži časove iz mehanike. Pristupačna cena i fleksibilni termini. Prvi čas...",
+    price: 1500,
+    location: "Novi Sad",
+    timeAgo: "Pre 2 sata",
+    rating: 4.8
+  },
+  {
+    title: "Skripta iz Algebre",
+    description: "Skripta za polaganje ispita iz predmeta Algebra. Student sam smera Informacione Tehnologija...",
+    price: 2000,
+    location: "Zrenjanin",
+    timeAgo: "Pre 3 sata",
+    rating: 5.0
+  },
+  {
+    title: "Brucošijada",
+    description: "Brucošijada Medicinskog fakulteta u Novom Sadu. Svi studenti su dobrodošli na najluđu žurku u...",
+    price: 1000,
+    location: "Novi Sad",
+    timeAgo: "Pre 1 sat",
+    rating: 5.0
+  },
+  {
+    title: "Pisanje CV-a",
+    description: "Profesionalno pisanje CV-a uz mogućnost pisanja motivacionog pisma...",
+    price: 3000,
+    location: "Beograd",
+    timeAgo: "Pre 4 sata",
+    rating: 4.0
   }
-  export default Noglas
+];
+
+function Noglas() {
+  return (
+    <>
+
+    <div className="header">
+    <h1>Najnoviji oglasi</h1>
+    <a href="#">Pogledaj sve...</a>
+  </div>
+    <div className='pozadina-oglas'>   <div className="container">
+      <div className="content">
+      
+
+     <div className="listings-grid">
+          {listings.map((listing, index) => (
+            <div key={index} className="listing-card">
+              <div className="listing-content">
+                <div className="listing-header">
+                  <h2 className="listing-title">{listing.title}</h2>
+                  <div className="listing-price">
+                    {listing.price} RSD
+                  </div>
+                </div>
+                
+                <p className="listing-description">{listing.description}</p>
+                
+                <div className="listing-footer">
+                  <div className="listing-metadata">
+                    <div className="metadata-item">
+                      <MapPin />
+                      <span>{listing.location}</span>
+                    </div>
+                    <div className="metadata-item">
+                      <Clock />
+                      <span>{listing.timeAgo}</span>
+                    </div>
+                  </div>
+                  <div className="rating">
+                    <Star className="fill-current" />
+                    <span>{listing.rating}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="post-button">
+          <button>
+            Postavite oglas
+          </button>
+        </div></div>
+      </div>
+    </div></>
+  );
+}
+
+export default Noglas;

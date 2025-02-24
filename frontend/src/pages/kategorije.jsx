@@ -4,7 +4,7 @@ function Kategorija() {
   return (
     <div className="Kategorija">
       <h1 className="naslov">KATEGORIJE</h1>
-      <div className="kategorija-container">
+      <div className="kategorijaa-container">
         <div className="kontent"><img src="../public/vite.svg" alt="alt" /><p>Privatni časovi</p></div>
         <div className="kontent"><img src="../public/vite.svg" alt="alt" /><p>Programiranje</p></div>
         <div className="kontent"><img src="../public/vite.svg" alt="alt" /><p>Pisanje</p></div>

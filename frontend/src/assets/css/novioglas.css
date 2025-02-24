@@ -1,160 +1,167 @@
-:root {
-    --primary: #2c3e50;
-    --accent: #e74c3c;
-    --text: #34495e;
-    --border: #bdc3c7;
-  }
+/* novioglas.css */
+.pozadina-oglas{
+  background-image: linear-gradient(rgba(0, 0, 255, 0.4), rgba(0, 0, 255, 0.3)), url("src/assets/slike/laptop.jpg");
   
-  .Noglas {
-    margin: 0;
-    padding: 0 1rem;
-    font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), url("src/assets/slike/download.jpg");
-background-size: cover;
-  }
-  
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 2.5rem;
-    position: relative;
-  }
-  
-  .naslov {
-    font-size: 2.2rem;
-    color: black;
-    margin: 0;
-    font-weight: 700;
-  }
-  
-  .dugme {
-    color: var(--accent);
-    background: none;
-    border: none;
-    padding: 0;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .kategorija-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    
-  }
-  
-  .kontentt {
-    background: #fff;
-    border: 2px solid var(--border);
-    border-radius: 30px;
-
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .kontentt:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .title-price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0;
-    position: relative; /* Omogućava da se .cena pozicionira u odnosu na ovaj div */
-    width: 100%; /* Širina roditeljskog div-a */
-    height: 200px; /* Visina roditeljskog div-a (primer) */
-  }
-  
-  h4 {
-    font-size: 1.3rem;
-    color: var(--primary);
-    margin-left: 10px;
-    color: black;
-  }
-  
-  .cena {
-    color: black;
-    font-weight: 700;
-    font-size: 0.8rem;
-    width: 60px;
-    height: 60px;
-    text-align: center;
-   
-    border-radius: 50%; /* Kružni oblik */
-    background-color: rgba(5, 72, 18, 0.6); /* Polu-transparentna tamno zelena boja */
-
-    display: flex;
-    justify-content: center; /* Horizontalno centriranje */
-    align-items: center; /* Vertikalno centriranje */
-    position: absolute; /* Pozicionira se u odnosu na roditeljski div */
-    top: 2; /* Postavlja se na vrh roditeljskog div-a */
-    right: 0; /* Postavlja se na desnu stranu roditeljskog div-a */
-    transform: translate(-35px, 20px); 
+  background-size:cover;
+ 
 }
-  .opis {
-    color: var(--text);
-    margin-top:10px;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    width: 800px;
-    height: 400px;
-    margin-left: 10px;
-    overflow: auto; /* Omogućava skrolovanje kada tekst prelazi ograničenje */
-    min-height: 90px;
-    
-  }
+/* Osnovni stilovi za kontejner i sadržaj */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+ 
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Stilovi za header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left:20px;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.header a {
+  color: #1667e0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
+/* Stilovi za grid oglasa */
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding-top: 50px;
   
-  .info-container {
-    display: flex;
-   
-    align-items: center;
-    height: 100px;
-    position: relative;
-    top: -50px; /* Podesi vrednost prema potrebi */
+}
+
+/* Stilovi za kartice oglasa */
+.listing-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.listing-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.listing-content {
+  padding: 16px;
+}
+
+.listing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.listing-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.listing-price {
+  background-color: #dcfce7;
+  color: #166534;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.listing-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.listing-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.listing-metadata {
+  display: flex;
+  gap: 16px;
+}
+
+.metadata-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.metadata-item svg {
+  width: 16px;
+  height: 16px;
+  color: #666;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rating svg {
+  width: 16px;
+  height: 16px;
+  color: #ffc107;
+}
+
+.rating span {
+  font-weight: 500;
+}
+
+/* Stilovi za dugme */
+.post-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 100px;
+}
+
+.post-button button {
+  background-color: #1667e0;
+  color: white;
+  border: none;
+  padding: 12px 24px;
   
-  }
-  
-  .info-linija {
-    color: var(--text);
-    font-size: 1rem;
-margin-right: 50px;
-    border-top: 1px solid #eee;
-    margin-top: 8rem;
-    white-space: nowrap;
-    
-  }
-  
-  @media (max-width: 768px) {
-    .kategorija-container {
-      grid-template-columns: 1fr;
-    }
-  
-    .naslov {
-      font-size: 1.8rem;
-      padding-right: 120px;
-    }
-  
-    .dugme {
-      font-size: 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .kontent {
-      padding: 1rem;
-    }
-  
-    h4 {
-      font-size: 1.1rem;
-    }
-  
-    .cena {
-      font-size: 1.1rem;
-    }
-  }
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-button button:hover {
+  background-color: #0d47a1;
+}
