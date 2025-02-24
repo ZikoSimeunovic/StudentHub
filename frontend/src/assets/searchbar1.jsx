@@ -22,6 +22,7 @@ const SearchBar1 = () => {
           border: "1px solid #ccc",
           outline: "none",
           boxSizing: "border-box",
+          marginRight:"15px"
         }}
       />
 

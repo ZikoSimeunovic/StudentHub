@@ -5,6 +5,9 @@ import './App.css'
 import NavBar from './pages/Navbar.jsx'
 import Hero from './pages/Hero.jsx'
 import Kategorija from './pages/kategorije.jsx'
+import Noglas from './pages/NoviOglasi.jsx'
+import Login from './pages/Login.jsx'
+import Reg from './pages/Reg.jsx'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -13,6 +16,9 @@ function App() {
   <NavBar/>
  <Hero/>
  <Kategorija/>
+<Noglas/>
+<Login></Login>
+<Reg></Reg>
     </>
   )
 }

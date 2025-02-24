@@ -16,7 +16,7 @@ const SearchBar = () => {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         style={{
-          width: "60%",
+          width: "40%",
           padding: "10px",
           borderRadius: "8px",
           border: "1px solid #ccc",
@@ -33,7 +33,7 @@ const SearchBar = () => {
             top: "100%",
             left: "50%",
             transform: "translateX(-50%)", // Centriranje rezultata
-            width: "60%", // 60% širina u odnosu na SearchBar
+            width: "40%", // 60% širina u odnosu na SearchBar
             margin: "0",
             padding: "0",
             listStyle: "none",

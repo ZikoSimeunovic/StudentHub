@@ -1,0 +1,126 @@
+/* Glavni kontejner stranice */
+.login-page {
+    min-height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tamna providna pozadina preko slike */
+.login-overlay {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(30, 58, 138, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header sa logom */
+.login-header {
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+   
+}
+
+.login-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(30, 58, 138);
+    left: 0%;
+    margin-left: 25px;
+
+}
+
+/* Kontejner za login formu */
+.login-form-container {
+    width: 100%;
+    max-width: 28rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 100px;
+}
+
+/* Naslov prijave */
+.login-title {
+    color: white;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Stilizacija input polja */
+.login-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1rem;
+}
+
+.login-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.8);
+}
+
+/* Label za inpute */
+.login-label {
+    display: block;
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Checkbox i dodatne opcije */
+.login-checkbox {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid rgb(209, 213, 219);
+}
+
+.login-checkbox-label {
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Login dugme */
+.login-button {
+    width: 100%;
+    background-color: rgb(37, 99, 235);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    transition: background-color 200ms ease-in-out;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.login-button:hover {
+    background-color: rgb(29, 78, 216);
+}
+
+/* Link za registraciju */
+.login-register-link {
+    color: rgb(74, 222, 128);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-register-link:hover {
+    color: rgb(134, 239, 172);
+    text-decoration: underline;
+}

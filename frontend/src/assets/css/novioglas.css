@@ -1,0 +1,160 @@
+:root {
+    --primary: #2c3e50;
+    --accent: #e74c3c;
+    --text: #34495e;
+    --border: #bdc3c7;
+  }
+  
+  .Noglas {
+    margin: 0;
+    padding: 0 1rem;
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.5)), url("src/assets/slike/download.jpg");
+background-size: cover;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
+  
+  .naslov {
+    font-size: 2.2rem;
+    color: black;
+    margin: 0;
+    font-weight: 700;
+  }
+  
+  .dugme {
+    color: var(--accent);
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .kategorija-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+  }
+  
+  .kontent {
+    background: #fff;
+    border: 2px solid var(--border);
+    border-radius: 30px;
+
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .kontent:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    position: relative; /* Omogućava da se .cena pozicionira u odnosu na ovaj div */
+    width: 100%; /* Širina roditeljskog div-a */
+    height: 200px; /* Visina roditeljskog div-a (primer) */
+  }
+  
+  h4 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-left: 10px;
+    color: black;
+  }
+  
+  .cena {
+    color: black;
+    font-weight: 700;
+    font-size: 0.8rem;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+   
+    border-radius: 50%; /* Kružni oblik */
+    background-color: rgba(5, 72, 18, 0.6); /* Polu-transparentna tamno zelena boja */
+
+    display: flex;
+    justify-content: center; /* Horizontalno centriranje */
+    align-items: center; /* Vertikalno centriranje */
+    position: absolute; /* Pozicionira se u odnosu na roditeljski div */
+    top: 2; /* Postavlja se na vrh roditeljskog div-a */
+    right: 0; /* Postavlja se na desnu stranu roditeljskog div-a */
+    transform: translate(-35px, 20px); 
+}
+  .opis {
+    color: var(--text);
+    margin-top:10px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    width: 800px;
+    height: 400px;
+    margin-left: 10px;
+    overflow: auto; /* Omogućava skrolovanje kada tekst prelazi ograničenje */
+    min-height: 90px;
+    
+  }
+  
+  .info-container {
+    display: flex;
+   
+    align-items: center;
+    height: 100px;
+    position: relative;
+    top: -50px; /* Podesi vrednost prema potrebi */
+  
+  }
+  
+  .info-linija {
+    color: var(--text);
+    font-size: 1rem;
+margin-right: 50px;
+    border-top: 1px solid #eee;
+    margin-top: 8rem;
+    white-space: nowrap;
+    
+  }
+  
+  @media (max-width: 768px) {
+    .kategorija-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .naslov {
+      font-size: 1.8rem;
+      padding-right: 120px;
+    }
+  
+    .dugme {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .kontent {
+      padding: 1rem;
+    }
+  
+    h4 {
+      font-size: 1.1rem;
+    }
+  
+    .cena {
+      font-size: 1.1rem;
+    }
+  }
