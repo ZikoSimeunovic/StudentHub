@@ -8,6 +8,7 @@ import Kategorija from './pages/kategorije.jsx'
 import Noglas from './pages/NoviOglasi.jsx'
 import Login from './pages/Login.jsx'
 import Reg from './pages/Reg.jsx'
+import MojProfil from './pages/MojProfil.jsx'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -19,6 +20,8 @@ function App() {
 <Noglas/>
 <Login></Login>
 <Reg></Reg>
+<MojProfil></MojProfil>
+
     </>
   )
 }
