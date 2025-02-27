@@ -10,6 +10,8 @@ import Login from './pages/Login.jsx'
 import Reg from './pages/Reg.jsx'
 import MojProfil from './pages/MojProfil.jsx'
 import Oglas from './pages/Oglas.jsx'
+import Doglas from './pages/DodajOglas.jsx'
+import IzmeniO from './pages/IzmeniOglas.jsx'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -23,6 +25,8 @@ function App() {
 <Reg></Reg>
 <MojProfil></MojProfil>
 <Oglas></Oglas>
+<Doglas></Doglas>
+<IzmeniO/>
     </>
   )
 }

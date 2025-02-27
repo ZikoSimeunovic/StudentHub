@@ -14,10 +14,10 @@ function Oglas() {
             className="code-image"
           />
           <div className="navigation">
-            <button className="nav-button">
+            <button className="navv-button">
               <ChevronLeft size={24} />
             </button>
-            <button className="nav-button">
+            <button className="navv-button">
               <ChevronRight size={24} />
             </button>
           </div>
