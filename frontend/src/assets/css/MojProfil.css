@@ -1,11 +1,12 @@
-
 .profil-container {
-    position: relative;
-    min-height: 100vh;
-    padding: 20px;
-    background-color: #f3f4f6;
-    text-align: center;
-  }
+  position: relative;
+  min-height: 93vh;
+  padding: 20px;
+  background-image: linear-gradient(rgba(25, 118, 210, 0.7), rgba(58, 69, 78, 0.5)), url("src/assets/slike/laptop.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
 
   .nazad-dugme {
     position: absolute;
@@ -17,18 +18,20 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
   }
 
   .nazad-dugme:hover {
-    background-color: #0056b3;
+    background-color: #093f79;
   }
 
 
   .profil-naslov {
     position: absolute;
     top: 20px;
-    left: 20px;
-    font-size: 24px;
+    left: 60px;
+    font-size: 45px;
+    color: white;
     font-weight: bold;
   }
 
@@ -46,31 +49,40 @@
 
   .profil-ime {
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: bold;
+    color: white;
   }
 
 
   .profil-opis {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
     margin-top: 20px;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    color: #333;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.24);
+    padding: 20px;
   }
-
  
   .kontakt-info {
     margin-top: 20px;
+    color: white;
   }
 
   .kontakt-info p {
+    text-align: left;
+    margin-left: 510px;
     font-size: 18px;
     font-weight: bold;
   }
 
   .kontakt-info .kontakt-text {
-    color: #666;
+    color: white;
   }
 
  
@@ -90,17 +102,19 @@
   }
 
   .dugme-poruka {
-    background-color: #28a745;
+    background-color: #007bff;
+    font-size: 16px;
   }
 
   .dugme-poruka:hover {
-    background-color: #1e7e34;
+    background-color: #093f79;
   }
 
   .dugme-pozovi {
-    background-color: #dc3545;
+    background-color: #007bff;
+    font-size: 16px;
   }
 
   .dugme-pozovi:hover {
-    background-color: #bd2130;
+    background-color: #093f79;
   }
