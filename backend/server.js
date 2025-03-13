@@ -1,7 +1,8 @@
 import express from 'express';
-import cors from 'cors';
+import cors from 'cors'; // Uvezite cors paket
 import helmet from 'helmet';
 import dotenv from 'dotenv';
+import cookieParser from 'cookie-parser';
 import pool from './config/db.js';
 import authRoutes from './routes/authRoutes.js';
 
@@ -10,10 +11,13 @@ const app = express();
 
 // Middleware
 app.use(helmet());
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5173', // Dozvolite pristup samo sa ovog origin-a
+  credentials: true, // Dozvolite slanje kolačića
+}));
 app.use(express.json());
+app.use(cookieParser());
 app.use('/api/auth', authRoutes);
-// Dodajte ispod postojećih middleware-ova
 
 // Test ruta
 app.get('/', (req, res) => {

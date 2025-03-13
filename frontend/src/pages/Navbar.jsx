@@ -1,42 +1,38 @@
-import "../assets/css/navbar.css";
-import SearchBar1 from "../assets/searchbar1";
-import { Link } from "react-router-dom";
-import { Settings } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Settings } from 'lucide-react';
+import SearchBar1 from '../assets/searchbar1';
 
 function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  // Provera statusa prijave prilikom učitavanja komponente
   useEffect(() => {
-    // Provera statusa prijave sa backend-a
-    const checkLoginStatus = async () => {
-      try {
-        const response = await fetch("/api/auth/status", { credentials: "include" });
-        const data = await response.json();
-        setIsLoggedIn(data.isAuthenticated);
-      } catch (error) {
-        console.error("Greška pri proveri statusa prijave", error);
-      }
-    };
-
-    checkLoginStatus();
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsLoggedIn(true); // Korisnik je prijavljen
+    } else {
+      setIsLoggedIn(false); // Korisnik nije prijavljen
+    }
   }, []);
 
   const handleLogout = async () => {
     try {
-      await fetch("/api/auth/logout", { method: "POST", credentials: "include" });
-      setIsLoggedIn(false);
+      await fetch('/api/auth/logout', { method: 'POST', credentials: 'include' });
+      localStorage.removeItem('token'); // Uklonite token
+      setIsLoggedIn(false); // Ažurirajte stanje
+      window.location.href = '/'; // Redirektuj korisnika
     } catch (error) {
-      console.error("Greška pri odjavi", error);
+      console.error('Greška pri odjavi', error);
     }
   };
 
   return (
-    <div className="NavBar" style={{ position: "relative" }}>
+    <div className="NavBar" style={{ position: 'relative' }}>
       <h1>StudentHub</h1>
       <SearchBar1 />
-      
+
       <div className="settings-container" onClick={() => setShowMenu(!showMenu)}>
         <Settings />
         {showMenu && (
