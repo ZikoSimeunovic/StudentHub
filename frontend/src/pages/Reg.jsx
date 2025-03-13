@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import "../assets/css/reg.css";
 import { Eye, EyeOff } from 'react-feather';
-
+import { Link } from "react-router-dom";
 function Reg() {
   // Dodato stanje za formu
   const [formData, setFormData] = useState({
@@ -139,9 +139,9 @@ function Reg() {
           </button>
           <p className="login-text">
             Imate nalog?
-            <a href="#" className="login-link">
+            <Link to="/login" className="login-link">
               PRIJAVI SE
-            </a>
+          </Link>
           </p>
         </form>
       </div>

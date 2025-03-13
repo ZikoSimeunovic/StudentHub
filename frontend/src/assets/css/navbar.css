@@ -25,6 +25,7 @@
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
    
   }
   
@@ -43,5 +44,33 @@
   .SearchBar input:focus {
     outline: none;
     border-color: #4CAF50;
+  }
+  .settings-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .dropdown-menu a:hover {
+    background: #f0f0f0;
   }
   

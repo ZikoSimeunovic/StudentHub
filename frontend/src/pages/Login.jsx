@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { LogIn } from 'lucide-react';
 import '../assets/css/login.css';
-
+import { Link } from "react-router-dom";
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -85,9 +85,9 @@ function Login() {
 
               <div className="text-center text-white mt-6">
                 Nemaš nalog?{' '}
-                <a href="#" className="login-register-link">
+                <Link to="/reg" className="login-register-link">
                   REGISTRUJ SE
-                </a>
+              </Link>
               </div>
             </form>
           </div>

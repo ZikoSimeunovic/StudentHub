@@ -1,7 +1,7 @@
 import React from 'react';
 import { MapPin, Clock, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import '../assets/css/oglas.css';
-
+import { Link } from "react-router-dom";
 function Oglas() {
   return (
     <div className="containerr">
@@ -24,7 +24,7 @@ function Oglas() {
         </div>
 
         <div className="profile-card">
-          <span className="price">1500 RSD</span>
+      {/* Ovo je komentar u JSX-u   <span className="price">1500 RSD</span> */} 
           <div className="profile-header">
             <img
               src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200"
