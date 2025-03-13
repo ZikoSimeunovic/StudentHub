@@ -2,33 +2,60 @@ import React, { useState } from 'react';
 import { LogIn } from 'lucide-react';
 import '../assets/css/login.css';
 import { Link } from "react-router-dom";
+
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log('Login attempted:', { username, password, rememberMe });
+
+    if (!username || !password) {
+      alert('Molimo popunite sva polja.');
+      return;
+    }
+
+    try {
+      const response = await fetch('http://localhost:5000/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          usernameOrEmail: username,
+          password: password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert('Uspešno ste prijavljeni!');
+        localStorage.setItem('token', data.token);
+        window.location.href = '/';
+      } else {
+        alert(data.error || 'Došlo je do greške pri prijavi.');
+      }
+    } catch (error) {
+      console.error('Došlo je do greške:', error);
+      alert('Došlo je do greške pri prijavi.');
+    }
   };
 
   return (
     <div className="login-page">
       <div className="login-overlay flex flex-col items-center">
-        {/* Header */}
         <header className="login-header flex justify-between items-center px-4 w-full">
           <div className="login-logo">StudentHub</div>
           <div style={{ position: 'relative' }}>
-  <LogIn className="text-blue-900 w-6 h-6" style={{ position: 'absolute', left: '97%',marginTop:"-25px",marginRight:'8px' }} />
-</div>
+            <LogIn className="text-blue-900 w-6 h-6" style={{ position: 'absolute', left: '97%', marginTop: "-25px", marginRight: '8px' }} />
+          </div>
         </header>
 
-        {/* Login Form */}
         <div className="flex-1 flex items-center justify-center w-full px-4">
           <div className="login-form-container">
             <h1 className="login-title">PRIJAVA</h1>
-            
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="username" className="login-label">
@@ -87,7 +114,7 @@ function Login() {
                 Nemaš nalog?{' '}
                 <Link to="/reg" className="login-register-link">
                   REGISTRUJ SE
-              </Link>
+                </Link>
               </div>
             </form>
           </div>
