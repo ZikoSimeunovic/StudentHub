@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Clock, Star } from 'lucide-react';
 import "../assets/css/novioglas.css"
+import { Link } from "react-router-dom";
 
 const listings = [
   {
@@ -84,10 +85,11 @@ function Noglas() {
         </div>
 
         <div className="post-button">
-          <button>
-            Postavite oglas
-          </button>
-        </div></div>
+  <Link to="/dodajoglas">
+    <button>Postavite oglas</button>
+  </Link>
+</div>
+        </div>
       </div>
     </div></>
   );

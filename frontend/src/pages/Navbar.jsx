@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Settings } from 'lucide-react';
+import { User, Settings, PlusCircle, LogOut } from "lucide-react";
 import SearchBar1 from '../assets/searchbar1';
-
+import "../assets/css/navbar.css";
 function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -39,10 +39,18 @@ function NavBar() {
           <div className="dropdown-menu">
             {isLoggedIn ? (
               <>
-                <Link to="/profile">Profil</Link>
-                <Link to="/settings">Podešavanja</Link>
-                <Link to="/add-ad">Dodaj oglas</Link>
-                <button onClick={handleLogout}>Odjava</button>
+               <Link to="/mojprofil">
+  <User size={18} /> Profil
+</Link>
+<Link to="/podesavanja">
+  <Settings size={18} /> Podešavanja
+</Link>
+<Link to="/dodajoglas">
+  <PlusCircle size={18} /> Dodaj oglas
+</Link>
+<button onClick={handleLogout}>
+  <LogOut size={18} /> Odjava
+</button>
               </>
             ) : (
               <>
